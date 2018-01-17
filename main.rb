@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'sinatra/reloader'
 require_relative 'db_config'
-require_relative 'models/beers.rb'
+require_relative 'beers.rb'
 require_relative 'models/favourites.rb'
 require_relative 'models/users'
 
