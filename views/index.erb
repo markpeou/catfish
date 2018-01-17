@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <title></title>
+  </head>
+  <body>
+    <!-- <nav>
+      <img src="http://www.thecatfish.com.au/images/catfish/thecatfishlogo-280.png" alt="logo">
+
+    </nav> -->
+    <div class="">
+
+
+<!-- <form class="" action="/user_tastes" target="/user_tastes" method="get">
+    <p></p> -->
+
+    <% @beers.each do |beer| %>
+
+    <a href="/beers/<%= beer.id %>" class="item">
+
+    <img src="<%= beer.image_url %>">
+    
+    <h3 >
+      <!-- <input type="checkbox" name="beer" value="<%= beer.name %>"> -->
+    "<%= beer.name %>"
+    <p>by</p>
+    <%= beer.company %>
+    </h3>
+
+  </a>
+
+    <% end %>
+    <!-- <p><input type="submit" value="submit"></p>
+  </form> -->
+
+</div>
+<a href="/beers/new" class="new">post new beer</a>
+  </body>
+</html>

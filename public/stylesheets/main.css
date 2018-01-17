@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1e3963;
+  color: white;
+  text-decoration: none;
+  font-family: 'Sorts Mill Goudy', serif;
+}
+
+nav {
+  display: flex;
+  flex-direction:row;
+}
+nav img {
+  display:flex;
+  align-items:center;
+}
+
+div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  align-content: center;
+  justify-content:center;
+}
+
+a {
+  text-decoration: none;
+  color: #efefef;
+  transition: all 1s ease;
+}
+
+
+a:visited {
+  color: #eff8ff;
+}
+
+a:hover {
+  background-color: rgb(62, 110, 153);
+  color: #dcebf7;
+
+}
+
+.new {
+
+}
+
+
+p {
+  font-size: 0.7em;
+  font-style: italic;
+}
+
+h3 {
+text-align: left;
+padding: 5%;
+}
+
+.item {
+  width: 15%;
+  height: 15%;
+  margin: 2%;
+  box-shadow: 1px 1px 10px 1px #c0c9d1;
+  border: 0.5px solid #184970;
+  text-align:left;
+}
+
+.item img {
+  display: flex;
+  padding-top: 4%;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: 0;
+}
