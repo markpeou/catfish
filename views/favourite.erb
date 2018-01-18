@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <title>Beers you like</title>
+  </head>
+  <body>
+
+    <h1>Your Favourites: </h1>
+
+    <% @beers.each do |beer| %>
+    <img src="<%#= beers.image_url %>">
+
+    <h3 >
+    "<%= beer.name %>"
+    <p>by</p>
+    <%= beer.company %>
+    </h3>
+
+    <% end %>
+
+
+    <a href="/beers">back to home</a>
+  </body>
+</html>

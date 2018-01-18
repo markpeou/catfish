@@ -1,9 +1,9 @@
 require 'sinatra'
 require 'sinatra/reloader'
 require_relative 'db_config'
-require_relative 'beers.rb'
-require_relative 'models/favourites.rb'
-require_relative 'models/users'
+require_relative 'models/beer.rb'
+require_relative 'models/favourite.rb'
+require_relative 'models/user'
 
 enable :sessions # sinatra provides this feature
 # gives you a global hash "session to write in"
@@ -81,15 +81,21 @@ put '/beers/:id' do
   redirect "/beers/#{params[:id]}"
 end
 
-post '/favourites' do
-fb1 = Favourite.new
-fb1.user_id = params[:user_id]
-fb2.beer_id = params[:beer_id]
-fb1.save
+get '/favourite' do
+  @beers = current_user.favourites
+   erb :favourite
 end
 
-get '/favourites' do
+post '/favourite' do
+fav = Favourite.new
+fav.name = params[:name]
+fav.company = params[:company]
+fav.beer_id = params[:id]
+fav.user = current_user
+fav.save
+redirect '/favourite'
 end
+
 
 get '/login' do
   erb :login

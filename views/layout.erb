@@ -12,13 +12,14 @@
       <img  src="http://www.thecatfish.com.au/images/catfish/thecatfishlogo-280.png" alt="logo">
     </a>
 
-  <% if logged_in? %>
-  logged in as <%= current_user.email %>
-    <form action="/session" method="post">
-      <input type="hidden" name="_method" value="delete">
-      <button>Logout</button>
-    </form>
+  <div class="login"> <% if logged_in? %>
+    logged in as <%= current_user.email %>
+      <form action="/session" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <button>Logout</button>
+      </form>
   <% end %>
+  </div>
 </nav>
 
 

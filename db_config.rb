@@ -1,4 +1,4 @@
-require 'pg'
+
 require 'active_record'
 
 options = {
@@ -6,4 +6,4 @@ options = {
   database: 'catfishbeer'
 }
 
-ActiveRecord::Base.establish_connection(options)
+ActiveRecord::Base.establish_connection( ENV['DATABASE_URL'] || options)

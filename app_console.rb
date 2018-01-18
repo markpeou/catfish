@@ -5,5 +5,5 @@ require_relative 'models/user_tastes'
 require_relative 'models/user'
 
 
-binding.pry
+
 puts 'app console'

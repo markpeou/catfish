@@ -18,6 +18,12 @@ nav img {
   align-items:center;
 }
 
+.login {
+  display: flex;
+  align-items: flex-end;
+  padding-left: 10%;
+}
+
 div {
   display: flex;
   flex-direction: row;

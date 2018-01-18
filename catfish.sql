@@ -20,8 +20,10 @@ CREATE TABLE beers (
 
 CREATE TABLE favourites (
   id SERIAL PRIMARY KEY,
-  user_id INTEGER NOT NULL,
+  company VARCHAR (255),
   beer_id INTEGER NOT NULL,
+  name VARCHAR (255),
+  user_id INTEGER NOT NULL,
   FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE RESTRICT,
   FOREIGN KEY (beer_id) REFERENCES beers(id)
   ON DELETE RESTRICT

@@ -13,28 +13,35 @@
     </nav> -->
     <div class="">
 
-
-<!-- <form class="" action="/user_tastes" target="/user_tastes" method="get">
-    <p></p> -->
-
     <% @beers.each do |beer| %>
-
+    <form action="/favourite" method="post">
     <a href="/beers/<%= beer.id %>" class="item">
 
     <img src="<%= beer.image_url %>">
-    
+
     <h3 >
-      <!-- <input type="checkbox" name="beer" value="<%= beer.name %>"> -->
+      <input type="checkbox" name="beer" value="<%= beer.name %>">
     "<%= beer.name %>"
     <p>by</p>
     <%= beer.company %>
     </h3>
-
   </a>
 
+  <form class="favourites" action="/favourite" method="post">
+    <label for="">Name</label>
+    <input type="text" name="name">
+    <label for="">Company</label>
+    <input type="text" name="company">
+    <label for="">id</label>
+    <input type="text" name="id">
+
+    <button>Add to Favourites</button>
+  </form>
+
+
     <% end %>
-    <!-- <p><input type="submit" value="submit"></p>
-  </form> -->
+    <p><input type="submit" value="submit"></p>
+  </form>
 
 </div>
 <a href="/beers/new" class="new">post new beer</a>
