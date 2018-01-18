@@ -55,3 +55,8 @@ https://untappd.akamaized.net/site/brewery_logos/brewery-3324_00cef.jpeg
 
 batch brewing company
 https://untappd.akamaized.net/site/beer_logos/beer-535499_dc794_sm.jpeg
+
+
+https://github.com/markpeou/catfish/raw/master/db.dump
+
+heroku pg:backups:restore 'https://github.com/markpeou/catfish/raw/master/db.dump' DATABASE_URL

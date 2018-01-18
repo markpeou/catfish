@@ -82,15 +82,15 @@ put '/beers/:id' do
 end
 
 get '/favourite' do
-  @beers = current_user.favourites
+  @favourites = current_user.favourites
    erb :favourite
 end
 
 post '/favourite' do
 fav = Favourite.new
-fav.name = params[:name]
-fav.company = params[:company]
-fav.beer_id = params[:id]
+# fav.name = params[:name]
+# fav.company = params[:company]
+fav.beer_id = params[:beer_id]
 fav.user = current_user
 fav.save
 redirect '/favourite'

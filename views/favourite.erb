@@ -9,13 +9,13 @@
 
     <h1>Your Favourites: </h1>
 
-    <% @beers.each do |beer| %>
-    <img src="<%#= beers.image_url %>">
+    <% @favourites.each do |fav| %>
+    <img src="<%#= fav.image_url %>">
 
     <h3 >
-    "<%= beer.name %>"
+    "<%= fav.beer.name %>"
     <p>by</p>
-    <%= beer.company %>
+    <%= fav.beer.company %>
     </h3>
 
     <% end %>

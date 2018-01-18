@@ -2,18 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/show.css">
     <title></title>
   </head>
   <body>
 
-    <h1>Catfish</h1>
+  <div class="">
 
     <h2>
     <%= @beer.name %>
     </h2>
     <img src="<%= @beer.image_url %>" >
+  </div>
 
+
+    <footer>
 
     <a href="/beers/<%= @beer.id %>/edit">Edit Beer</a>
     <form action="/beers/<%= @beer.id %" method="post">
@@ -23,5 +26,6 @@
 
 
     <a href="/beers">back to home</a>
+  </footer>
   </body>
 </html>
