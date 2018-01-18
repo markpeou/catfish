@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'sinatra/reloader'
+# require 'sinatra/reloader'
 require_relative 'db_config'
 require_relative 'models/beer.rb'
 require_relative 'models/favourite.rb'
