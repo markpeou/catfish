@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>All User's Favourites</title>
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+
+
+    <% @favourites.each do |fav| %>
+
+
+    <h3 >
+    <%= fav.user.email %>
+    <%= fav.user.beers.name %>
+
+
+    </h3>
+
+    <% end %>
+
+  </body>
+</html>

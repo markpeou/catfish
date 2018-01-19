@@ -13,6 +13,16 @@ nav {
   display: flex;
 }
 
+.welcome {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.welcome a {
+  text-decoration:none;
+}
+
+
 nav img {
   display:flex;
   align-items: center;
@@ -23,31 +33,29 @@ nav img {
 
 
 .login {
-  display: flex;
-  align-items: flex-end;
+  text-align: right;
 }
 
-div {
+.main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
-  justify-content:center;
+  /*justify-content:flex-start;*/
 }
 
 form.favourites {
-  display: flex;
-  align-items: flex-end;
-
-
-
+  display:flex;
+  align-items: baseline;
+  align-self: flex-start;
 }
 
 
-a {
+a.item {
   text-decoration: none;
   color: #efefef;
   transition: all 1s ease;
+  border-radius: 10px;
 }
 
 
@@ -55,7 +63,7 @@ a:visited {
   color: #eff8ff;
 }
 
-a:hover {
+a.item:hover {
   background-color: rgb(62, 110, 153);
   color: #dcebf7;
 
@@ -72,7 +80,7 @@ footer {
   padding-left: 5%;
 }*/
 
-p {
+p.main {
   font-size: 0.7em;
   font-style: italic;
 }
@@ -98,7 +106,4 @@ padding: 5%;
   padding-left: 5%;
   padding-right: 5%;
   margin: 0;
-}
-
-button {
 }

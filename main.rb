@@ -1,6 +1,8 @@
 require 'sinatra'
 # require 'sinatra/reloader'
 require_relative 'db_config'
+require 'pry'
+require 'byebug'
 require_relative 'models/beer.rb'
 require_relative 'models/favourite.rb'
 require_relative 'models/user'
@@ -72,18 +74,17 @@ get '/beers/:id/edit' do
 end
 
 put '/beers/:id' do
-  # update beer and redirect to home
   beer = Beer.find(params[:id])
   beer.name = params[:name]
   beer.image_url = params[:image_url]
   beer.save
-  # redirect '/dishes' + params[:id]
   redirect "/beers/#{params[:id]}"
 end
 
 get '/favourite' do
-  @favourites = current_user.favourites
-   erb :favourite
+  puts session[:user_id]
+  @favourites = Favourite.where(user_id: session[:user_id])
+  erb :favourite
 end
 
 post '/favourite' do
@@ -96,6 +97,11 @@ fav.save
 redirect '/favourite'
 end
 
+delete '/beers/:id' do
+  beer = Beer.find(params[:id])
+  beer.destroy
+  redirect '/beers'
+end
 
 get '/login' do
   erb :login

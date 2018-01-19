@@ -8,7 +8,13 @@
   </head>
   <body>
 
-    <div class="">
+    <div class="welcome">
+      <a href="/favourite">View Your Current Favourites</a>
+      <p>Add to your favourites from the selection:</p>
+    </div>
+
+
+    <div class="main">
 
     <% @beers.each do |beer| %>
 
@@ -24,7 +30,7 @@
 
   <form class="favourites" action="/favourite" method="post">
     <input type="hidden" name="beer_id" value="<%= beer.id %>">
-    <button>Add to Favourites</button>
+    <button class= "fav">Add to Favourites</button>
   </form>
     <% end %>
   </div>
