@@ -10,3 +10,7 @@ img {
   display: flex;
   align-items: center;
 }
+
+a:visited {
+  color: #eff8ff;
+}

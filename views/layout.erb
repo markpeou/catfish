@@ -12,16 +12,16 @@
     <a href="/beers">
       <img  src="http://www.thecatfish.com.au/images/catfish/thecatfishlogo-280.png" alt="logo">
     </a>
-  </nav>
 
   <div class="session"> <% if logged_in? %>
-    <p>logged in as <%= current_user.email %></p>
+    <p>logged in as <%= current_user %></p>
     <form action="/session" method="post">
       <input type="hidden" name="_method" value="delete">
       <button id="logout">Logout</button>
     </form>
     <% end %>
   </div>
+</nav>
 
   <%= yield %>
 

@@ -9,21 +9,15 @@
 
 
   <div class="">
-
     <h2>
     <%= @beer.name %>
     </h2>
     <img src="<%= @beer.image_url %>" >
   </div>
 
-  <form class="favourites" action="/favourite" method="post">
-    <input type="hidden" name="beer_id" value="<%= @beer.id %>">
-    <button>Add to Favourites</button>
-  </form>
+<footer>
 
-    <footer>
-
-    <a href="/beers/<%= @beer.id %>/edit">Edit Beer</a>
+  <a href="/beers/<%= @beer.id %>/edit">Edit Beer</a>
     <form action="/beers/<%= @beer.id %>" method="post">
       <input type ="hidden" name="_method" value="delete">
       <button>Delete Beer</button>

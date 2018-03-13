@@ -11,6 +11,7 @@
     <div class="welcome">
       <a href="/favourite">View Your Current Favourites</a>
       <p>Add to your favourites from the selection:</p>
+
     </div>
 
     <div class="main">
@@ -25,12 +26,8 @@
         <p>by</p>
         <%= beer.company %>
       </h3>
-      </a>
 
-    <form class="favourites" action="/favourite" method="post">
-      <input type="hidden" name="beer_id" value="<%= beer.id %>">
-      <button class= "fav">Add to Favourites</button>
-    </form>
+      </a>
       <% end %>
   </div>
 
