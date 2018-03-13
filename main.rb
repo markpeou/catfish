@@ -42,6 +42,7 @@ end
 
 get '/beers' do
   @beers = Beer.all
+  user.name = params[:name]
   erb :index
 end
 

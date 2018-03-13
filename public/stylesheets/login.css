@@ -1,6 +1,3 @@
-* {
-  box-sizing: border-box;
-}
 
 body {
   background-color: #1e3963;
@@ -27,7 +24,6 @@ nav {
 
 }
 
-
 h2 {
   display:flex;
   justify-content: center;
@@ -45,24 +41,36 @@ label {
   margin-left: 2%;
   margin-top: 1%;
   margin-bottom: -4px;
+  cursor:pointer;
 }
 
 input {
   border-radius: 4px;
-  height: 20%;
-  width: 15%;
+  margin-bottom:3px;
+  padding:10px;
+  width: 100%;
+  border:1px solid #CCC
 }
 
 
+form {
+  margin:0 auto;
+  width:300px
+}
 
 button {
-  margin-left:1%;
-  border-radius: 5px;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  padding:10px
 }
 
-button:hover {
-  margin-left: 0.5%;
-  transition-duration: 0.5s;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+#form-switch {
+  display:none
+}
+#register-form {
+  display:none
+}
+#form-switch:checked~#register-form {
+  display:block
+}
+#form-switch:checked~#login-form {
+  display:none
 }

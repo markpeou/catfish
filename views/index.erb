@@ -13,32 +13,31 @@
       <p>Add to your favourites from the selection:</p>
     </div>
 
-
     <div class="main">
 
-    <% @beers.each do |beer| %>
+      <% @beers.each do |beer| %>
 
-    <a href="/beers/<%= beer.id %>" class="item">
-    <img src="<%= beer.image_url %>">
+      <a href="/beers/<%= beer.id %>" class="item">
+        <img src="<%= beer.image_url %>">
 
-    <h3 >
-    "<%= beer.name %>"
-    <p>by</p>
-    <%= beer.company %>
-    </h3>
-  </a>
+      <h3 >
+        "<%= beer.name %>"
+        <p>by</p>
+        <%= beer.company %>
+      </h3>
+      </a>
 
-  <form class="favourites" action="/favourite" method="post">
-    <input type="hidden" name="beer_id" value="<%= beer.id %>">
-    <button class= "fav">Add to Favourites</button>
-  </form>
-    <% end %>
+    <form class="favourites" action="/favourite" method="post">
+      <input type="hidden" name="beer_id" value="<%= beer.id %>">
+      <button class= "fav">Add to Favourites</button>
+    </form>
+      <% end %>
   </div>
 
 
-<footer>
-  <a href="/beers/new" class="new">post new beer</a>
-</footer>
+    <footer>
+      <a href="/beers/new" class="new">post new beer</a>
+    </footer>
 
 
 
