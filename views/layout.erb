@@ -13,6 +13,7 @@
       <img  src="http://www.thecatfish.com.au/images/catfish/thecatfishlogo-280.png" alt="logo">
     </a>
 
+  </nav>
   <div class="session"> <% if logged_in? %>
     <p>logged in as <%= current_user %></p>
     <form action="/session" method="post">
@@ -21,7 +22,6 @@
     </form>
     <% end %>
   </div>
-</nav>
 
   <%= yield %>
 
